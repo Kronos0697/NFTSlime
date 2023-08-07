@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.cdnfonts.com/css/swis721-blk-bt");
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: white;
+  background: black;
+  font-family: "Swis721 Blk BT", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1rem, 5vw, 5rem);
+  font-weight: 100;
+  text-align: none;
+  letter-spacing: 0.5em;
+  margin-right: -0.5em;
+  color: #cccccc;
+  width: 90vw;
+  max-width: 1200px;
+}
+/*헤더부분*/
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  height: 4em;
+  font-family: "Swis721 Blk BT", sans-serif;
+  font-weight: 650;
+  font-size: clamp(0.66rem, 4vw, 2rem);
+  letter-spacing: none;
+  text-transform: none;
+}
+.left-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-section a {
+  margin-left: 20px; /* 각 SNS 로고 사이의 간격 조절 */
+}
+
+.right-section img {
+  width: 30px; /* 로고 이미지의 크기를 조절 */
+  height: 30px;
+  /* 로고 이미지에 추가적인 스타일이 필요하면 여기에 작성하세요. */
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+}
+
+section .outer,
+section .inner {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+/*첫번째 페이지 섹션*/
+section .top-left,
+section .bottom-left_01,
+section .bottom-left_02,
+section .top-right,
+section .bottom-right,
+section .middle-right {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  font-family: "Swis721 Blk BT", sans-serif;
+  letter-spacing: none;
+  text-transform: none;
+}
+
+section .top-left {
+  top: clamp(10%, 10vw, 90px);
+  left: clamp(1%, 1vw, 3px);
+  font-size: clamp(0.66rem, 6vw, 8rem);
+  font-weight: 900;
+  justify-content: flex-start;
+}
+section .bottom-left_01 {
+  bottom: clamp(2%, 10vw, 55px);
+  left: clamp(1%, 1vw, 3px);
+  font-size: clamp(0.66rem, 4vw, 7rem);
+  font-weight: 900;
+  justify-content: flex-start;
+}
+section .bottom-left_02 {
+  bottom: clamp(4%, 3vw, 20px);
+  left: clamp(1%, 1vw, 3px);
+  font-size: clamp(0.66rem, 2vw, 2rem);
+  font-weight: clamp(899, 900, 100vw);
+  justify-content: flex-start;
+}
+
+section .top-right {
+  top: clamp(3%, 25vw, 120px);
+  right: clamp(2%, 1vw, 10px); /* 수정 */
+  font-size: clamp(0.66rem, 2vw, 1rem);
+  font-weight: 900;
+  justify-content: flex-end;
+}
+
+section .middle-right {
+  bottom: clamp(5%, 14vw, 110px);
+  right: clamp(4%, 13vw, 80px); /* 수정 */
+  font-size: clamp(0.66rem, 4vw, 6rem);
+  font-weight: clamp(899, 900, 100vw);
+  justify-content: flex-end;
+}
+
+section .bottom-right {
+  bottom: clamp(4%, 3vw, 20px);
+  right: clamp(2%, 5vw, 20px); /* 수정 */
+  font-size: clamp(0.66rem, 2vw, 2rem);
+  font-weight: clamp(899, 900, 100vw);
+  justify-content: flex-end;
+}
+
+.image-section {
+  position: relative;
+  height: 50vh; /* 높이를 기기 화면의 50%로 설정 */
+  background-color: #f0f0f0; /* 이미지가 없을 때 보여줄 배경색을 설정하세요 */
+}
+
+.image-wrapper {
+  position: fixed;
+  z-index: 3; /* 이미지를 겹치기 위해 z-index 값을 설정하세요 */
+}
+
+.image1 {
+  width: 25%; /* 기기 화면의 너비의 10%로 설정 */
+  height: auto; /* 높이는 자동으로 조절됩니다 */
+  bottom: -5%; /* 하단 위치를 기기 화면의 하단에서 5% 위에 배치 */
+  left: 49%; /* 왼쪽 위치를 기기 화면의 왼쪽에서 5% 오른쪽에 배치 */
+  transform: rotate(15deg); /* 이미지의 회전을 설정 */
+}
+
+.image2 {
+  width: 20%; /* 기기 화면의 너비의 7%로 설정 */
+  height: auto; /* 높이는 자동으로 조절됩니다 */
+  bottom: -13%; /* 하단 위치를 기기 화면의 하단에서 10% 위에 배치 */
+  right: 45%; /* 오른쪽 위치를 기기 화면의 오른쪽에서 5% 왼쪽에 배치 */
+  transform: rotate(-15deg); /* 이미지의 회전을 설정 */
+}
+
+.image-wrapper img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    top: auto;
+    bottom: auto;
+    transform: none;
+  }
+  .image1 {
+    width: 55%;
+    bottom: 20%;
+    left: 60%;
+    transform: translateX(-50%) rotate(12deg);
+  }
+  .image2 {
+    width: 47%;
+    bottom: 19%;
+    right: 60%;
+    transform: translateX(50%) rotate(-15deg);
+  }
+}
+
+/*두 번째 화면*/
+.image_page_02 {
+  width: 40%; /* 기기 화면의 너비의 10%로 설정 */
+  height: auto; /* 높이는 자동으로 조절됩니다 */
+  bottom: 2%; /* 하단 위치를 기기 화면의 하단에서 5% 위에 배치 */
+  left: 3%; /* 왼쪽 위치를 기기 화면의 왼쪽에서 5% 오른쪽에 배치 */
+  transform: none; /* 이미지의 회전을 설정 */
+}
+
+section .page_02_right {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  font-family: "Swis721 Blk BT", sans-serif;
+  letter-spacing: none;
+  text-transform: none;
+
+  top: clamp(40%, 21vw, 400px);
+  right: clamp(2%, 1vw, 10px); /* 수정 */
+  font-size: clamp(1.3rem, 2vw, 3rem);
+  font-weight: 900;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .image_page_02 {
+    width: 70%; /* 이미지를 화면 너비의 70%로 조정 */
+    left: 15%; /* 왼쪽 위치를 화면 왼쪽에서 15% 오른쪽으로 조정 */
+    bottom: 10%; /* 하단 위치를 50px로 조정 */
+    /* 기타 이미지 스타일 조정 */
+  }
+  .image_page3_01 {
+    width: 30%;
+    top: 25%;
+    left: 10%;
+  }
+  .image_page3_02 {
+    width: 30%;
+    top: 25%;
+    left: 30%;
+  }
+
+  section .page_02_right {
+    top: 21%; /* 텍스트를 화면 상단에서 50% 위치로 조정하여 가운데 정렬 */
+    font-size: clamp(0.66rem, 4.2vw, 3rem);
+    text-align: center;
+    /* 기타 텍스트 스타일 조정 */
+  }
+}
+/*세 번째 페이지*/
+
+section .page_03_middle {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  width: 100%;
+  z-index: 3;
+  font-family: "Swis721 Blk BT", sans-serif;
+  letter-spacing: none;
+  text-transform: none;
+
+  top: clamp(4%, 20vw, 150px);
+
+  font-size: clamp(1.3rem, 7vw, 4rem);
+  font-weight: 900;
+  justify-content: center;
+}
+
+.image_page3_01 {
+  width: 23%; /* 기기 화면의 너비의 10%로 설정 */
+  height: auto; /* 높이는 자동으로 조절됩니다 */
+  left: 5%;
+  bottom: 1%; /* 하단 위치를 기기 화면의 하단에서 5% 위에 배치 */
+  justify-content: bottom; /* 왼쪽 위치를 기기 화면의 왼쪽에서 5% 오른쪽에 배치 */
+  transform: none; /* 이미지의 회전을 설정 */
+}
+.image_page3_02 {
+  width: 23%; /* 기기 화면의 너비의 10%로 설정 */
+  height: auto; /* 높이는 자동으로 조절됩니다 */
+  left: 30%;
+  bottom: 1%; /* 하단 위치를 기기 화면의 하단에서 5% 위에 배치 */
+  justify-content: bottom; /* 왼쪽 위치를 기기 화면의 왼쪽에서 5% 오른쪽에 배치 */
+  transform: none; /* 이미지의 회전을 설정 */
+}
+
+section .bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+}
+section .bg h2 {
+  z-index: 2;
+}
+section .bg .clip-text {
+  overflow: hidden;
+}
+
+/*네 번째 페이지*/
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+/* -- YouTube Link Styles -- */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(30, 30, 30);
+}
+
+#source-link {
+  bottom: 60px;
+}
+
+#source-link > i {
+  color: rgb(94, 106, 210);
+}
+
+#yt-link > i {
+  color: rgb(239, 83, 80);
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i,
+.meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+.first .bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(../source/bg_01.png);
+}
+
+.second .bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(../source/bg_02.png);
+}
+
+.third .bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(../source/bg_03.png);
+}
+
+.fourth .bg {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+.fifth .bg {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url("https://images.unsplash.com/photo-1617141636403-f511e2d5dc17?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxODAzMjc4Mw&ixlib=rb-1.2.1&q=75w=1920");
+  background-position: 50% 45%;
+}
+
+h2 * {
+  will-change: transform;
+}
+
+@layer demo {
+  @keyframes rotate {
+    to {
+      rotate: 1turn;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .letter {
+      animation: rotate 3s linear reverse infinite;
+
+      & > * {
+        animation: rotate 3s linear infinite;
+      }
+    }
+  }
+
+  .letter > * {
+    mix-blend-mode: multiply;
+
+    &:nth-child(1) {
+      color: color(display-p3 1 0 0);
+    }
+    &:nth-child(2) {
+      color: color(display-p3 0 1 0);
+    }
+    &:nth-child(3) {
+      color: color(display-p3 0 0 1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      mix-blend-mode: screen;
+
+      &:nth-child(1) {
+        color: color(display-p3 1 0 1);
+      }
+      &:nth-child(2) {
+        color: color(display-p3 0 1 1);
+      }
+      &:nth-child(3) {
+        color: color(display-p3 1 1 0);
+      }
+    }
+  }
+}
+
+@layer demo.support {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html {
+    block-size: 100%;
+    color-scheme: dark light;
+  }
+
+  body {
+    min-block-size: 100%;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    place-content: center;
+  }
+
+  h1 {
+    font-size: 30cqi;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    position: fixed;
+    letter-spacing: 0.12em;
+    display: flex;
+    align-items: center;
+  }
+
+  .letter {
+    display: inline-grid;
+
+    & > * {
+      display: inline-block;
+      grid-area: 1 / 1;
+
+      &:nth-child(1) {
+        translate: -1cqi 1cqi;
+      }
+      &:nth-child(2) {
+        translate: 1cqi -1cqi;
+      }
+      &:nth-child(3) {
+        translate: 1cqi 2cqi;
+      }
+    }
+  }
+}
